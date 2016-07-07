@@ -1,4 +1,6 @@
-package com.venkat.examples.annotations;
+package com.venkat.annotations.pojos;
+
+import com.venkat.annotations.types.Author;
 
 @Author(authorName = "SriVenkat", title = "BhagavathGita")
 public class Book {

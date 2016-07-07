@@ -1,4 +1,4 @@
-package com.venkat.examples.annotations;
+package com.venkat.annotations.types;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;

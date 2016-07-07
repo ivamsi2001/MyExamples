@@ -1,10 +1,16 @@
-package com.venkat.examples.annotations;
+package com.venkat.annotations.test;
 
 import java.lang.reflect.Method;
 
+import org.junit.Test;
+
+import com.venkat.annotations.pojos.Book;
+import com.venkat.annotations.types.Author;
+
 public class SampleAnnotationTest {
 
-	public static void main(String[] args) {
+	@Test
+	public void myTest() {
 		Book bookObj;
 		Class<?> classRef;
 		Method mtdRef;
@@ -13,7 +19,7 @@ public class SampleAnnotationTest {
 			bookObj = new Book();
 			classRef = bookObj.getClass();
 			//
-			anntRef =	classRef.getAnnotation(Author.class);
+			anntRef = classRef.getAnnotation(Author.class);
 			printAuthorInfo(anntRef);
 			//
 			mtdRef = classRef.getDeclaredMethod("annotatedMethod");
@@ -22,10 +28,10 @@ public class SampleAnnotationTest {
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	private static void printAuthorInfo(Author author){
-		System.out.println("Author Name : [" + author.authorName() + "] Book Title : ["+author.title() + "]");
+
+	private void printAuthorInfo(Author author) {
+		System.out.println("Author Name : [" + author.authorName() + "] Book Title : [" + author.title() + "]");
 	}
 }
