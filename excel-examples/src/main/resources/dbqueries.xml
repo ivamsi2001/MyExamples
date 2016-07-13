@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Data>
+	<ConnectionDetails>
+		<Driver>com.mysql.jdbc.Driver</Driver>
+		<DBURL>jdbc:mysql://localhost:3306/test</DBURL>
+		<DBUserName>root</DBUserName>
+		<DBPassword>manager</DBPassword>
+	</ConnectionDetails>
+	<ResultSets>
+		<ResultSet id="EMP_TABLE_RESULTS">
+			<SqlQuery>select * from employee</SqlQuery>
+		</ResultSet>
+	</ResultSets>
+</Data>
