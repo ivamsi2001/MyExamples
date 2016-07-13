@@ -192,5 +192,6 @@
 		<module>../annotations</module>
 		<module>../annotations-client</module>
 		<module>../arquillian</module>
+		<module>../excel-examples</module>
 	</modules>
 </project>
