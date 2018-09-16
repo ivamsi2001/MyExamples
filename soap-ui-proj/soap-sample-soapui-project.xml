@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6ab91655-c6fd-4960-823d-cd13fab1b256" activeEnvironment="Default" name="soap-sample" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="80d81587-90cd-4f62-95df-24a8d26a91c3" wsaVersion="NONE" name="SampleServiceServiceSoapBinding" type="wsdl" bindingName="{http://ws.venkat.com/}SampleServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/soap-sample/SampleService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/soap-sample/SampleService?wsdl"><con:part><con:url>http://localhost:8080/soap-sample/SampleService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SampleServiceService" targetNamespace="http://ws.venkat.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.venkat.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ws.venkat.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="add" type="tns:add"/>
+      <xs:element name="addResponse" type="tns:addResponse"/>
+      <xs:element name="mul" type="tns:mul"/>
+      <xs:element name="mulResponse" type="tns:mulResponse"/>
+      <xs:element name="sayHello" type="tns:sayHello"/>
+      <xs:element name="sayHelloResponse" type="tns:sayHelloResponse"/>
+      <xs:complexType name="mul">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int"/>
+          <xs:element name="arg1" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="mulResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sayHello">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sayHelloResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:greetingType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="greetingType">
+        <xs:sequence>
+          <xs:element name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="msg" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="add">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int"/>
+          <xs:element name="arg1" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="addResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addResponse">
+    <wsdl:part element="tns:addResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mulResponse">
+    <wsdl:part element="tns:mulResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mul">
+    <wsdl:part element="tns:mul" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sayHello">
+    <wsdl:part element="tns:sayHello" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="add">
+    <wsdl:part element="tns:add" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sayHelloResponse">
+    <wsdl:part element="tns:sayHelloResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SampleService">
+    <wsdl:operation name="mul">
+      <wsdl:input message="tns:mul" name="mul"></wsdl:input>
+      <wsdl:output message="tns:mulResponse" name="mulResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sayHello">
+      <wsdl:input message="tns:sayHello" name="sayHello"></wsdl:input>
+      <wsdl:output message="tns:sayHelloResponse" name="sayHelloResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add">
+      <wsdl:input message="tns:add" name="add"></wsdl:input>
+      <wsdl:output message="tns:addResponse" name="addResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SampleServiceServiceSoapBinding" type="tns:SampleService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mul">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mul">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mulResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sayHello">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sayHello">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sayHelloResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="add">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SampleServiceService">
+    <wsdl:port binding="tns:SampleServiceServiceSoapBinding" name="SampleServicePort">
+      <soap:address location="http://localhost:8080/soap-sample/SampleService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/soap-sample/SampleService</con:endpoint></con:endpoints><con:operation id="93aabf76-5207-45dd-a601-984c6bcfcbe9" isOneWay="false" action="" name="add" bindingOperationName="add" type="Request-Response" outputName="addResponse" inputName="add" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="babc3fae-5098-42cd-a60e-5c5016f3285e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soap-sample/SampleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.venkat.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:add>\r
+         <arg0>?</arg0>\r
+         <arg1>?</arg1>\r
+      </ws:add>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.venkat.com/SampleService/add"/></con:call></con:operation><con:operation id="e58d1f67-9809-4d0c-868b-57a895f059b3" isOneWay="false" action="" name="mul" bindingOperationName="mul" type="Request-Response" outputName="mulResponse" inputName="mul" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ebbf49e6-0a40-48db-a618-e0dfbf783a36" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soap-sample/SampleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.venkat.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:mul>\r
+         <arg0>?</arg0>\r
+         <arg1>?</arg1>\r
+      </ws:mul>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.venkat.com/SampleService/mul"/></con:call></con:operation><con:operation id="055f7296-ccd8-40ad-9c49-cf8d3e5484e7" isOneWay="false" action="" name="sayHello" bindingOperationName="sayHello" type="Request-Response" outputName="sayHelloResponse" inputName="sayHello" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c2397edd-0c4f-43cd-ba42-0cc9be22a234" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soap-sample/SampleService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.venkat.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:sayHello>\r
+         <!--Optional:-->\r
+         <arg0>Venkat</arg0>\r
+      </ws:sayHello>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.venkat.com/SampleService/sayHello"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
