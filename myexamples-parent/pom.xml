@@ -213,6 +213,7 @@
 		<module>../arquillian</module>
 		<module>../excel-examples</module>
 		<module>../jaxb-xsd-example</module>
+		<module>../java-se-8-examples</module>
 		<module>../jdbc-samples</module>
 		<module>../soap-sample</module>
 		<module>../soap-with-wsdl</module>

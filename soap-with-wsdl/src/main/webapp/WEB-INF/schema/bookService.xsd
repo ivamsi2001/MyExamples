@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.venkat.com/soap-example-2/1.0"
-	    xmlns:tns="http://www.venkat.com/soap-example-2/1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.venkat.com/soap-with-wsdl/1.0"
+	    xmlns:tns="http://www.venkat.com/soap-with-wsdl/1.0">
 
 	<element name="BookServiceRequest" type="tns:BookServiceRequestType" />
 

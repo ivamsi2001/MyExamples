@@ -12,7 +12,7 @@ import com.venkat.ws.service2.BookServiceResponseType;
 import com.venkat.ws.service2.BookType;
 
 @WebService(serviceName = "BookService", portName = "BookServicePort", endpointInterface = "com.venkat.ws.service2.BookServicePortType",
-			targetNamespace = "http://www.venkat.com/soap-example-2/1.0", wsdlLocation = "WEB-INF/wsdl/bookService.wsdl")
+			targetNamespace = "http://www.venkat.com/soap-with-wsdl/1.0", wsdlLocation = "WEB-INF/wsdl/bookService.wsdl")
 public class BookServicePortImpl implements BookServicePortType {
 
 	@Override
